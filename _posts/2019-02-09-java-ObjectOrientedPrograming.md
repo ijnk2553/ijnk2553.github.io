@@ -4,7 +4,7 @@ title:  "객체지향프로그래밍 001"
 date:   2019-02-09 20:56:35 +0900
 categories: jekyll update
 ---
-# 객체지향 프로그래밍의 목적
+## 객체지향 프로그래밍의 목적
 
  1. 생산성 향상
    * 한번에 보다 많은 양의 개발이 가능
@@ -38,17 +38,17 @@ categories: jekyll update
 
 
 
-## 클래스
+# 클래스
   * 객체를 만들기 위한 기능 명세서/ 설계서
 
-## 객체
+# 객체
  * 클래스를 이용하여 만들어낸 결과물
 
 하나의 `클래스`는 여러 개의 `객체`를 `생성`할 수 있다.
 
 `클래스`와 `객체`는 메모리에 `생성`되었는지 여부에 의해 구분한다.
 
-## 클래스 선언 방법
+# 클래스 선언 방법
 > 【 제어자 】  class  【 클래스명 】  {    ...    }
 
 ```java
@@ -59,7 +59,7 @@ public class HelloWorld {
 }
 ```
 
-## 객체 생성 방법
+# 객체 생성 방법
 
 > 【 클래스명 】  【 객체명(변수명) 】 = new 【 클래스의 생성자 】 ;
 
@@ -78,14 +78,14 @@ public class HelloWorldObjectTest {
 ---
 
 
-## 인스턴스화 / 추상화
+# 인스턴스화 / 추상화
 > * **인스턴스화** : 클래스로부터 새로운 객체를 생성 `메모리에 할당` 하는 과정 
 > * **추상화** : 개발자가 만들고자 하는 객체의 기능과 속성을 `논리적으로` 뽑아내어 클래스로 `설계`하는 과정 
   
 ---
 
 
-# 클래스의 구성요소
+## 클래스의 구성요소
 
 ![class_organization](https://user-images.githubusercontent.com/47468250/52521757-6c5e3600-2cbf-11e9-892a-087517fc404d.png)
 
@@ -95,10 +95,10 @@ public class HelloWorldObjectTest {
 
 ---
 
-## 메서드
+# 메서드
   * 명령 구문들의 묶음
 
-### 메서드 선언 방법
+# 메서드 선언 방법
 > 【 접근제어자 】  【 반환데이터형 】 【 메서드명 】 ( 【 매개변수데이터형 `parameter_type` 】 【 매개변수명 `parameter_name` 】 ) { ... }
 >
 >
@@ -135,7 +135,7 @@ public class HelloWorld {
 ```
 
 
-### 메서드 사용방법
+# 메서드 사용방법
 > 【 클래스명 】  【 객체명 】 = new 【 클래스의 생성자 】 ;
 >
 > 【 데이터형 】  【 변수① 】 = 【 객체명 】.메서드명 ( 【 매개변수 】 )
@@ -161,4 +161,63 @@ public class HelloWorldObjectTest {
 }
 
 ```
+---
 
+# 생성자 
+> 생성자 `constructor` : 클래스를 객체로 인스턴스화`메모리에 할당` 하는 과정에서 호출되는 __클래스이름과 같은 이름의 메서드__
+>
+>`new` 키워드와 함께 호출된다.
+>
+>객체를 생성할때 필요한 기능이 있다면 생성자에 구현
+
+# 생성자의 선언
+> 【 접근제어자 】  【 클래스명 】 ( 【 매개변수데이터형 `parameter_type` 】 【 매개변수명 `parameter_name` 】 ) { ... }
+> * 매개변수가 없는 생성자는 클래스를 만들때 디폴트로 생성됨.
+
+
+```java
+package jp.co.gcstest;
+
+public class HelloWorld {
+	
+	int attribute;
+
+	/**
+	 * 디폴트 생성자 원래는 안보임.
+	 */
+	public HelloWorld() {
+	}
+	
+	/**
+	 * 속성을 초기화 할 수 있는 생성자
+	 * @param attribute 속성 초기화 값
+	 */
+	public HelloWorld(int attribute) {
+		this.attribute = attribute;
+	}
+	
+	
+}
+```
+
+
+# 생성자 사용방법
+> 【 클래스명 】  【 객체명 】 = new 【 클래스의 생성자 】 ;
+
+```java
+package jp.co.gcstest;
+
+public class HelloWorldObjectTest {
+
+	public static void main(String[] args) {
+		
+		boolean returnValue;
+		int paramNine = 9;
+		
+		HelloWorld helloWorld = new HelloWorld();
+		HelloWorld helloWorld2 = new HelloWorld(paramNine);
+		
+	}
+
+}
+```
