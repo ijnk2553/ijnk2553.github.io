@@ -105,7 +105,8 @@ public class HelloWorldObjectTest {
 > 반환데이터값이 필요없는 경우 __void__ 를 사용
 >
 >【 접근제어자 】  void 【 메서드명 】 ( 【 매개변수데이터형 `parameter_type` 】 【 매개변수명 `parameter_name` 】 ) { ... }
->
+
+
 ```java
 package jp.co.gcstest;
 
@@ -160,3 +161,4 @@ public class HelloWorldObjectTest {
 }
 
 ```
+
