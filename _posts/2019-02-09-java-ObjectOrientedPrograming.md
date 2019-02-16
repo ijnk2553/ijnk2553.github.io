@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "객체지향프로그래밍 001"
+title:  "객체 지향 프로그래밍 001"
 date:   2019-02-09 20:56:35 +0900
 categories: jekyll update
 ---
