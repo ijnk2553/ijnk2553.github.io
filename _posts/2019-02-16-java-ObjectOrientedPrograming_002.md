@@ -74,3 +74,42 @@ public class AttributeCalling {
     * 그리기 기능 구현을 위한 메서드 : drawLine()
     * 점직기 기능 구현을 위한 메서드 : drowDot()
 
+``` java
+package jp.co.gcstest;
+
+import java.awt.Color;
+
+public class Pencil {
+	Color color;
+	float thickness;
+	
+	public void drawLine() {
+		System.out.println("--------------------");
+	}
+	
+	public void drawDot() {
+		System.out.println("........");
+	}
+
+}
+```
+
+---
+
+## package
+* 클래스가 어떤 패키지에 포함되어 있는지 명시적으로 표현
+
+> package 【 패키지명 】;
+
+## import
+* 다른 클래스나의 메소드나 속성을 참조할 때, 명시적으로 표현
+
+> import 【 패키지명 】.【 클래스명 】;
+>
+> import 【 패키지명 】.*;
+
+``` java
+package jp.co.gcstest;
+
+import java.awt.Color;
+```
