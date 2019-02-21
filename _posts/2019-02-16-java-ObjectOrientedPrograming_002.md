@@ -1,8 +1,9 @@
 ---
-layout: post
+layout: single
 title:  "객체 지향 프로그래밍 002"
 date:   2019-02-16 19:35:35 +0900
-categories: jekyll update
+categories:
+     - JAVA
 ---
 ## 속성 
 

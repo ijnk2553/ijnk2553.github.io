@@ -1,8 +1,15 @@
 ---
-layout: post
+layout: single
 title:  "2진수 계산 출력"
 date:   2019-02-09 20:56:35 +0900
-categories: jekyll update
+categories:
+  - JAVA
+tags:
+  - content
+  - css
+  - edge case
+  - lists
+  - markup
 ---
 
 ## 2진수 계산 문제 풀이
