@@ -25,101 +25,40 @@ categories:
 # 추상화
 * 객체를 설계하는 기초 단계
 
-> 【 데이터 타입 】 【 변수명 】  =  【 데이터 】 ;
+> **추상 :** 여러가지 사물이나 개념에서 `공통`되는 특성이나 속성을 추출해 파악하는 작용
 >
-> 【 클래스명 】 【 변수명 】  = new 【 생성자 】 ();
-> * **클래스 영역 내부** 에서 선언되어야 함( **메서드 영역 밖**  )
+> * 객체에 필요한 기능을 파악하고 분류
+> * 정의된 `객체의 기능`은 클래스의 `메소드`
+> * 정의된 `객체의 데이터`는 클래스의 `속성`
 
+* 추상화 예시 : 고객 관리 프로그램
+> **기능 요건**
+>
+> 1. 고객관리 프로그램은 고객과 마일리지 정보를 저장, 처리한다.
+> 2. 고객관리 프로그램에서 제공하는 기능은 데이터 생성, 수정, 저장이다.
+
+> **추상화**
+> 필요한 객체: 고객 정보 표형 객체, 마일리지 정보 표현 객체, 객체들을 처리(생성, 수정, 삭제)하는 객체
+> 1. CustomerManager:고객 정보 처리 객체
+> 2. CustomerValue: 고객 정보 객체
+> 3. MileageValue: 마일리지 정보 객체
 ``` java
-package jp.co.gcstest;
+public class CustomerManager{
+	CustomerValue customer;
+	MileageValue maileage;
 
-public class AttributeTest {
-	
-	//클래스 영역의 안쪽
-	//속성 선언
-	int weight = 74;
-	String name = new String("cookies");
-	//메서드 영역의 바깥쪽 
-	public void testMethod() {
-		
-	}
+	public void create(){}
 
+	public void delete(){}
+
+	public void update(){}
+
+	public void store(){}
 }
 ```
 
----
+CustomerManager클래스가 속성 customer와 mileage에 저장된 데이터와 각 기능을 처리하는 메서드들을 이용하여 고객 관리 프로그램을 구현을 추상화
 
-# 속성의 호출
-> 객체를 생성하고 생성된 객체에 점(.)을 붙인 다음 속성명을 호출
-
-``` java
-package jp.co.gcstest;
-
-public class AttributeCalling {
-
-	public static void main(String[] args) {
-		//객체를 생성
-		AttributeTest attributeTest = new AttributeTest();
-		//생성한 객체명에 (.)을 붙인 후에 속성을 호출
-		attributeTest.weight = 80;
-		attributeTest.name = "imma";
-
-	}
-
-}
-```
 
 ---
 
-# 그림판의 연필 객체
-> 기능 : 그리기, 점찍기
->
-> 특성 (데이터) : 색깔, 두께
-
-
-* 연필 객체의 구성
-    * 연필객체 설계를 위한 클래스 : Pencil
-    * 색깔 데이터 표현을 위한 클래수변수 : color (데이터 타입 : Color)
-    * 선의 두께 데이터 표현을 위한 클래스변수 : thickness (데이터 타입 : float)
-    * 그리기 기능 구현을 위한 메서드 : drawLine()
-    * 점직기 기능 구현을 위한 메서드 : drowDot()
-
-``` java
-package jp.co.gcstest;
-
-import java.awt.Color;
-
-public class Pencil {
-	Color color;
-	float thickness;
-	
-	public void drawLine() {
-		System.out.println("--------------------");
-	}
-	
-	public void drawDot() {
-		System.out.println("........");
-	}
-
-}
-```
-
----
-
-## package
-* 클래스가 어떤 패키지에 포함되어 있는지 명시적으로 표현
-
-> package 【 패키지명 】;
-
-## import
-* 다른 클래스나의 메소드나 속성을 참조할 때, 명시적으로 표현
-
-> import 【 패키지명 】.【 클래스명 】;
->
-> import 【 패키지명 】.*;
-
-``` java
-package jp.co.gcstest;
-
-import java.awt.Color;
-```
