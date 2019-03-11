@@ -42,6 +42,7 @@ categories:
 > 1. CustomerManager:고객 정보 처리 객체
 > 2. CustomerValue: 고객 정보 객체
 > 3. MileageValue: 마일리지 정보 객체
+
 ``` java
 public class CustomerManager{
 	CustomerValue customer;
