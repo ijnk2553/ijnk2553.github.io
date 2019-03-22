@@ -1,7 +1,8 @@
 ---
 layout: single
 title:  "객체 지향 프로그래밍 003"
-date:   2019-03-17 09:46:35 +0900
+date:   2019-03-17 09:46:35 +0900Z
+comments: true
 categories:
      - JAVA
 ---
