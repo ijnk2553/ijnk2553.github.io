@@ -1,5 +1,7 @@
 # main links
 main:
+  - title: "한글"
+    url: /categories/#korean
   - title: "JAVA"
     url: /categories/#java
   - title: "Category"
